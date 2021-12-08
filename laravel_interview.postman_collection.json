@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "1186839c-16e9-4b97-9e37-3cd736f422c9",
+		"name": "laravel_interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bbb",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "Registering User(POST) Method \nfields required\n1)name\n2)email\n3)password"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|xqNlfYv5kW5J9CQYvp1PdzruQN6tI8jWgPk1kGIj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "1234567",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Require Field\n1)email\n2)password"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/getAlltodo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|INwOibk0GYWxNr67e26T7zRMY3245qj13oL5sT5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/getAlltodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getAlltodo"
+					]
+				},
+				"description": "Unauthorized routes\n\nFetching All Todo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/todo/8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/todo/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"8"
+					]
+				},
+				"description": "Uauthorized Routes\n\nget specific todo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/addTodo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|W4AKiI0sLVouCSozTfZoc4Tarv6lVzrZTJIUXMC1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cid",
+							"value": "1001",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "version",
+							"value": "51",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "12334445",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "2019001",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "2019001",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "new data   5555",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "new test post",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/addTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addTodo"
+					]
+				},
+				"description": "Need authentication after successfully login we get a token place that token inside authorization tab and select bearer token option \n\nRequired Param\n1)title\n2)description"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/updateTodo/8",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|W4AKiI0sLVouCSozTfZoc4Tarv6lVzrZTJIUXMC1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title ",
+							"value": "update news testing",
+							"type": "text"
+						},
+						{
+							"key": "done",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/updateTodo/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateTodo",
+						"8"
+					],
+					"query": [
+						{
+							"key": "titl",
+							"value": "yfff",
+							"disabled": true
+						},
+						{
+							"key": "done",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "ff",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Needs authention as explained in addTodo Description \nNo such required fields if it get any field empty so throws validation error"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/deleteTodo/9",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|INwOibk0GYWxNr67e26T7zRMY3245qj13oL5sT5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/deleteTodo/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteTodo",
+						"9"
+					]
+				},
+				"description": "Need authentication as in addtodo \n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|INwOibk0GYWxNr67e26T7zRMY3245qj13oL5sT5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bbb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "bhhh",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "confirmed",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "Need authentication as in addtodo"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
